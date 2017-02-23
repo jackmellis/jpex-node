@@ -1,7 +1,7 @@
 describe("$tick", function () {
   var Jpex, defaults, $tick;
   beforeEach(function () {
-    Jpex = require('jpex');
+    Jpex = require('jpex').extend();
     defaults = require('../src');
     Jpex.use(defaults);
     Jpex.extend(function (_$tick_) {

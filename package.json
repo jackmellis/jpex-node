@@ -8,7 +8,6 @@
     "coverage": "nyc jasmine",
     "lint": "eslint src --fix",
     "lcov-fix": "node node_modules/jpex-build-tools/lcov-fix",
-    "build": "node node_modules/jpex-build-tools/build --entry ./src --output ./dist/jpex-node.js --name jpexNode",
     "publish-please": "publish-please",
     "prepublish": "publish-please guard",
     "travis-prepublish": "node node_modules/jpex-build-tools/travis-prepublish"
@@ -26,13 +25,13 @@
   "devDependencies": {
     "eslint": "^3.15.0",
     "jasmine": "^2.5.3",
-    "jpex": "^2.0.0-alpha.0",
+    "jpex": "git+https://github.com/jackmellis/jpex.git#2.x",
     "jpex-build-tools": "git+https://github.com/jackmellis/jpex-build-tools.git",
     "nyc": "^10.1.2",
     "publish-please": "^2.2.0"
   },
   "dependencies": {
-    "jpex-defaults": "^2.0.0-alpha.0"
+    "jpex-defaults": "git+https://github.com/jackmellis/jpex-defaults-core.git"
   },
   "peerDependencies": {
     "jpex": "^2.0.0"

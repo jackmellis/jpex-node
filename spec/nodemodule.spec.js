@@ -1,7 +1,7 @@
 describe("node_module", function () {
   var Jpex, defaults, Class;
   beforeEach(function () {
-    Jpex = require('jpex');
+    Jpex = require('jpex').extend();
     defaults = require('../src');
     Jpex.use(defaults);
   });
