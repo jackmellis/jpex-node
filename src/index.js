@@ -4,20 +4,20 @@ var nodemodule = require('./nodemodule');
 
 exports.name = 'jpex-node';
 exports.install = function ({Jpex, on}) {
-  if (!Jpex.$$factories.$promise){
-      var defaults = require('jpex-defaults');
-      Jpex.use(defaults);
-  }
+    if (!Jpex.$$factories.$promise){
+        var defaults = require('jpex-defaults');
+        Jpex.use(defaults);
+    }
 
-  Jpex.register.factory('$fs', ['fs', '$promise'], $fs).lifecycle.class();
+    Jpex.register.factory('$fs', ['fs', '$promise'], $fs).lifecycle.class();
 
-  Jpex.register.factory('$tick', [], $tick).lifecycle.application();
+    Jpex.register.factory('$tick', [], $tick).lifecycle.application();
 
-  Jpex.register.node_module = nodemodule.bind(Jpex);
+    Jpex.register.node_module = nodemodule.bind(Jpex);
 
-  on('factories', function ({register}) {
-      register('node_module', nodemodule);
-  });
+    on('factories', function ({register}) {
+        register('node_module', nodemodule);
+    });
 };
 
 if (typeof window !== 'undefined' && window.Jpex && typeof window.Jpex.use === 'function'){
