@@ -1,6 +1,6 @@
 {
   "name": "jpex-node",
-  "version": "2.0.0-alpha.1",
+  "version": "2.0.0",
   "description": "Jpex defaults for node",
   "main": "src/index.js",
   "scripts": {
@@ -21,17 +21,17 @@
   "bugs": {
     "url": "https://github.com/jackmellis/jpex-node/issues"
   },
-  "homepage": "https://github.com/jackmellis/jpex-node#readme",
+  "homepage": "https://jpex-js.github.io/plugins/jpex-node",
   "devDependencies": {
     "eslint": "^3.15.0",
     "jasmine": "^2.5.3",
-    "jpex": "^2.0.0-alpha.1",
+    "jpex": "^2.0.0",
     "jpex-build-tools": "git+https://github.com/jackmellis/jpex-build-tools.git",
     "nyc": "^10.1.2",
     "publish-please": "^2.2.0"
   },
   "dependencies": {
-    "jpex-defaults": "git+https://github.com/jackmellis/jpex-defaults-core.git"
+    "jpex-defaults": "^2.0.0"
   },
   "peerDependencies": {
     "jpex": "^2.0.0"
